@@ -1,22 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% if title %}
-    <title>Про FLASK - {{ title }}</title>
-    {% else %}
-    <title>Про FLASK</title>
-    {% endif %}
-</head>
-<body>
-{% for m in menu %}
-<li>{{m}}</li>
-{% endfor %}
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    {% if title %}-->
+<!--    <title>Про FLASK - {{ title }}</title>-->
+<!--    {% else %}-->
+<!--    <title>Про FLASK</title>-->
+<!--    {% endif %}-->
+<!--</head>-->
+<!--<body>-->
+<!--{% for m in menu %}-->
+<!--<li>{{m}}</li>-->
+<!--{% endfor %}-->
 
-{% if title %}
-<h1>{{ title }}</h1>
-{% else %}
-<h1>Про FLASK</h1>
-{% endif %}
-</body>
-</html>
+<!--{% if title %}-->
+<!--<h1>{{ title }}</h1>-->
+<!--{% else %}-->
+<!--<h1>Про FLASK</h1>-->
+<!--{% endif %}-->
+<!--</body>-->
+<!--</html>-->
+
+{% extends "base.html" %}
+
+{% block content %}
+{{ super() }}
+<p>Содержимое страницы - О сайте</p>
+{% endblock %}
